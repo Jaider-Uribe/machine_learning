@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Predicción agricola</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Predicción agricola</h1>
+        <form action="/predict" method="post">
+
+            <div class="columnas">
+                <label for="Nitrogeno">Nitrógeno: </label>
+                <input type="number" name="Nitrogeno" id="Nitrogeno" step="0.1" min="0" max="147" required>
+
+                <label for="Fosforo">Fósforo: </label>
+                <input type="number" name="Fosforo" id="Fosforo" step="0.1" min="0" max="150" required>
+
+                <label for="Potasio">Potasio: </label>
+                <input type="number" name="Potasio" id="Potasio" step="0.1" min="0" max="215" required>
+
+                <label for="Temperatura">Temperatura: </label>
+                <input type="number" name="Temperatura" id="Temperatura" step="0.1" min="2000000" max="34900000000000000" required>
+
+                <label for="Humedad">Humedad: </label>
+                <input type="number" name="Humedad" id="Humedad" step="0.1" min="9000000" max="62700000000000000" required>
+
+                <label for="Ph">Ph: </label>
+                <input type="number" name="Ph" id="Ph" step="0.1" min="6800000" max="79000000000000000" required>
+
+                <label for="Precipitacion">Precipitación: </label>
+                <input type="number" name="Precipitacion" id="Precipitacion" step="0.1" min="800000" max="30600000000000000" required>
+            </div>
+
+            <button type="submit">Realizar Predicción</button>
+        </form>
+    </div>
+</body>
+
+</html>
